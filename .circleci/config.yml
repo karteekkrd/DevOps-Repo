@@ -35,8 +35,8 @@ jobs:
           name: Install MySQL CLI
           command: |
             sudo apt-get --allow-releaseinfo-change update && sudo apt-get install -y git curl libmcrypt-dev default-mysql-client
-            GRANT ALL PRIVILEGES ON *.*  TO user@127.0.0.1;
-            sudo mysql -h 127.0.0.1 -u user -ppassw0rd < sql-data/dummy.sql
+            #GRANT ALL PRIVILEGES ON *.*  TO user@127.0.0.1;
+            sudo mysql -h 127.0.0.1 -u root -prootpw < sql-data/dummy.sql
             sudo mysql -h 127.0.0.1 -u user -ppassw0rd --execute="SELECT * FROM test_db.Persons"
 workflows:
   version: 2
