@@ -1,3 +1,6 @@
+DROP SCHEMA [IF EXISTS] 'GYP';
+
+
 DROP TABLE IF EXISTS `Persons`;
 
 CREATE TABLE Persons (
